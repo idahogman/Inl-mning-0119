@@ -1,0 +1,327 @@
+/* Kan man ha flera fonts under samma @? */
+@font-face {
+  font-family: HK Nova;
+  src: url(HKNova-Medium.ttf);
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(Poppins-Regular.ttf);
+}
+
+body {
+  background-color: #fafafa;
+  color: #181818;
+  margin: 0px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "HK Nova", "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #181818;
+}
+
+a:visited {
+  color: #181818;
+}
+
+a:hover {
+  color: #c3c3c3;
+}
+
+p, ul {
+  font-family: "Poppins", sans-serif;
+  line-height: 140%;
+}
+
+ul {
+  list-style-type: circle;
+  list-style-position: outside;
+}
+
+/* Jag vill att knappen ska vara lika stor vid båda användningarna och att
+knappen ska vara responsiv. */
+button {
+  display: flex;
+  justify-content: flex-end;
+  border: 2px solid #181818;
+  padding: 20px 40px 20px 40px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #181818;
+  text-align: center;
+  transition: all 0.2s;
+  background-color: #f4f4f4;
+  font-size: 20px;
+  font-family: "HK Nova", sans-serif;
+}
+
+button:hover{
+  color:#ffffff;
+  border: 2px solid #ffffff;
+}
+
+
+/*
+}
+@media all and (max-width:30em){
+ a.button1{
+  display:block;
+  margin:0.4em auto;
+ }      Sparad ifall det ska användas senare!
+*/
+
+
+
+
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  margin-bottom: 50px;
+
+  /* Jag skulle ha velat att menyn följer med! */
+  position: sticky;
+
+  /* Vill göra lite genomskinlig! */
+  background-color: #f4f4f4;
+}
+
+.header a {
+  text-decoration: none;
+  font-size: 30px;
+  font-family: "HK Nova", "Poppins", sans-serif;
+  justify-content: flex-start;
+  width: 50%;
+}
+
+/* Vill att det ska synas vilken sida man är på! */
+.header-nav {
+  display: flex;
+  margin-right: 20px;
+  list-style-type: none;
+  width: 50%;
+  margin-right: 10px;
+  margin-bottom: 0;
+  justify-content: flex-end;
+}
+
+.header-nav a {
+  font-size: 18px;
+  margin-right: 20px;
+  font-family: "HK Nova", "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+.page {
+  width: 80%;
+  margin: auto;
+}
+
+.footer {
+  width: auto;
+  margin: auto;
+  background-color: #f4f4f4;
+  padding: 70px;
+  display: flex;
+}
+
+.footer p {
+  margin: auto;
+}
+
+.footer a {
+  margin: auto;
+}
+
+.picture {
+  position: relative;
+}
+
+.current {
+  padding: 50px;
+  font-size: 35px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  width: 50%;
+}
+
+.current p {
+  font-family: "HK Nova", "Poppins", sans-serif;
+}
+
+.gifmig {
+  display: flex;
+  margin: auto;
+  margin-bottom: 100px;
+  width: 100%;
+  /* border: 2px solid #181818; */
+  align-items: center;
+  border-radius: 20px;
+  opacity: 60%;
+}
+
+.img {
+  width: 100%;
+}
+
+/* Funderar på en ikon till höger om texten och width på 60% istället, det blir lättare att läsa. */
+.text {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 100px;
+  /* justify-content: flex-start; */
+}
+
+.reference {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px 100px 50px;
+  background-color: #f4f4f4;
+  padding: 75px 50px 75px;
+  border-radius: 10px;
+  box-shadow: 0px 30px 50px rgba(73, 73, 73, 0.2);
+}
+
+.referencetext {
+  width: 50%;
+}
+
+.reference button {
+  width: 160px;
+  height: 80px;
+  margin: auto;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.funfacts {
+  display: flex;
+}
+
+.funfacts img {
+  width: 50%;
+}
+
+.funfactstext {
+  margin: auto;
+  width: 50%;
+  justify-content: flex-end;
+}
+
+.funfactstext ul {
+  list-style: none;
+  padding: 0px;
+}
+
+.funfactstext li {
+  overflow: visible;
+  padding-left: 17px;
+  position: relative;
+  margin: 10px 0;
+}
+
+.funfactstext li::before {
+   content: "\1F86A";
+   left: 0;
+   position: absolute;
+}
+
+.projectlinks {
+  margin: auto;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.projectlinks img {
+  width: 25%;
+}
+
+.linkPDF {
+  justify-content: flex-end;
+  width: 50%;
+}
+
+.info {
+  display: flex;
+}
+
+.infoask {
+  list-style: none;
+  width: 10%;
+}
+
+.infoanswer {
+  list-style: none;
+  width: 40%;
+}
+
+.goals {
+  display: flex;
+  justify-content: space-between;
+}
+
+.goalstext, .goalslist {
+  width: 45%;
+}
+
+.goalslist ul {
+  list-style: none;
+  padding: 0px;
+}
+
+.goalslist li {
+  overflow: visible;
+  padding-left: 17px;
+  position: relative;
+  margin: 10px 0;
+}
+
+.goalslist li::before {
+   content: "\1F86A";
+   left: 0;
+   position: absolute;
+}
+
+.studiescard {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0px 0px 30px 0px;
+  background-color: #f4f4f4;
+  padding: 20px 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 30px 50px rgba(73, 73, 73, 0.2);
+}
+
+.studiescardtext {
+  width: 80%;
+  margin: auto;
+}
+
+.studiescardtext h4 {
+  margin-top: -10px;
+  font-style: italic;
+  font-size: 13px;
+}
+
+.studiescardtext h5 {
+  font-size: 11px;
+}
+
+.studiescardtext h3 {
+  font-size: 16px;
+}
+
+.studiescardtext p {
+  font-size: 12px;
+}
